@@ -1,5 +1,10 @@
+body{
+    background-color: #F6F6F6;
+}
+
 .navbar {
     height: 100px;
+    background-color: #0E1218;
 }
 
 .navbar-brand img {
@@ -24,6 +29,13 @@
     object-fit: cover;
 }
 
+.profile-picture-2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 .button-header {
     background-color: #3C4045;
     transition: background-color 0.3s ease;
@@ -41,4 +53,53 @@
     filter: invert(100%);
 }
 
+.custom-container {
+    background-color: #0E1218;
+    height: 350px;
+    padding: 10px;
+}
+
+@media (max-width: 576px) {
+    .custom-container {
+        height: auto;
+    }
+}
+
+.custom-container-2 {
+    background-color: #ffffff;
+    height: 350px;
+    padding: 10px;
+    margin-top:-160px;
+    position: relative;
+}
+
+@media (max-width: 576px) {
+    .custom-container {
+        height: auto;
+    }
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #0E1218;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-col,
+.footer-col-center,
+.footer-col-right {
+    padding-top: 10px; /* Adiciona um espaçamento superior nas colunas */
+}
 

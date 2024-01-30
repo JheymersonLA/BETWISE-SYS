@@ -1,0 +1,44 @@
+.navbar {
+    height: 100px;
+}
+
+.navbar-brand img {
+    max-height: 100%;
+}
+
+.navbar-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav.ml-auto {
+    display: flex;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.button-header {
+    background-color: #3C4045;
+    transition: background-color 0.3s ease;
+}
+
+.button-header:hover {
+    background-color: #5A5D60;
+}
+
+.button-header img {
+    transition: filter 0.3s ease;
+}
+
+.button-header:hover img {
+    filter: invert(100%);
+}
+
+

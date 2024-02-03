@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('titulo')
-    BETWISE
+    BETWISER
 @endsection
 
 @section('home')
@@ -85,31 +85,54 @@
 <div class="container custom-container-2 d-flex align-items-top">
     <div class="container">
         <!-- Índice de pesquisa -->
-        <div class="row">
-            <div class="col">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-auto">
                 <div class="row">
-                    <div class="col">
-                        <h6>Casas de apostas:</h6>
+                    <div class="col d-flex align-items-center justify-content-center">
+                        <div class="row ">
+                            <h6>Casas de apostas:</h6>
+                        </div>
                     </div>
                     <div class="col">
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <div class="button-group">
+                            <button id="selectableButton1" class="selectable-button button1" onclick="toggleSelection(this)">
+                            <img id="buttonImage1" class="button-image mx-1" src="/images/logo/Betano.svg" alt="Betano">
+                            </button>
+                            <button id="selectableButton2" class="selectable-button button2" onclick="toggleSelection(this)">
+                            <img id="buttonImage2" class="button-image mx-2" src="/images/logo/bet365.svg" alt="bet365">
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <h6>Cálcular o empate?</h6>
-                <button></button>
-            </div>
-            <div class="col">
+            <div class="col-auto">
                 <div class="row">
-                    <div class="col">
-                        <h6>Valor a apostar:</h6>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="R$ ">
+                    <h6>Calcular o Empate?</h6>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="button-group">
+                    <button id="selectableButton3" class="selectable-button button3" onclick="toggleSelection(this)">
+                        <img id="buttonImage3" class="button-image mx-3" src="/images/logo/X.svg" alt="Botão de Empate">
+                    </button>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="row">
+                    <h6>Valor a apostar:</h6>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <input type="text" class="form-control" placeholder="R$ ">
                     </div>
                     <div class="col">
-                        <button></button>
+                        <div class="button-group">
+                            <button class="button-calc">
+                                <span class="mx-5"><strong>Calcular</strong></span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -159,11 +182,27 @@
                 Versão 0.1 Alpha
             </div>
             <div class="col d-flex justify-content-end">
-                <a href="https://malpha.com.br">
+                <a href="https://malpha.com.br" target="_blank">
                     <img src="/images/logo/Malpha.svg" alt="Logo da Empresa" style="width: 100px; height: auto;">
                 </a>
             </div>
         </div>
     </div>
 </footer>
+
+<script>
+    function toggleSelection(button) {
+        const image = button.querySelector(".button-image");
+        const selectedClass = "selected";
+
+        button.classList.toggle(selectedClass);
+
+        if (button.classList.contains(selectedClass)) {
+            // Replace with correct selected image paths
+            image.src = image.src.replace(".svg", "-Selected.svg");
+        } else {
+            image.src = image.src.replace("-Selected.svg", ".svg");
+        }
+    }
+</script>
 @endsection
